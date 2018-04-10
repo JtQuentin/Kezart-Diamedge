@@ -1,0 +1,29 @@
+.topbar{
+  background: $color-second;
+  font-size: 0;
+
+  &_choice{
+    @include font($font:$font-title, $size:1.1rem, $line_height:2rem, $color:$white, $font_weight:$bold);
+    text-transform: uppercase;
+    padding-right: 1.5rem;
+  }
+
+  li{
+    display: inline-block;
+    @include font($font:$font-title, $size:1.1rem, $line_height:2rem, $color:$white, $font_weight:$bold);
+    background-color: $color-secondDark;
+    opacity: .4;
+    text-align: center;
+    width: 2.5rem;
+    height: 2rem;
+  }
+
+  &_language{
+    display: inline-block;
+
+    &--active{
+      opacity: 1 !important;
+    }
+  }
+
+}

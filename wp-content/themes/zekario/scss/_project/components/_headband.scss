@@ -1,0 +1,29 @@
+.headband{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 5rem 0 3rem 0;
+  text-align: center;
+
+  @include mq($from: md) {
+    padding: 14rem 0 3rem 0;
+  }
+
+  &_logo{
+    margin-bottom: 3rem;
+
+    @include mq($from: md) {
+      margin-bottom: 5rem;
+    }
+
+    img{
+      width: 15rem;
+      height: 15rem;
+
+      @include mq($from: md) {
+        width: 19rem;
+        height: 19rem;
+      }
+    }
+  }
+}

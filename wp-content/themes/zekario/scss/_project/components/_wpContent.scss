@@ -1,0 +1,115 @@
+.wp-content{
+    @include font($font:$font, $size:1.5rem, $line_height:2.5rem, $color:$gray, $font_weight:$regular);
+
+    h2{
+        @include font($font:$font, $size:2rem, $line_height:2.5rem, $color:$color-second, $font_weight:$bold);
+        margin-bottom: 2rem;
+    }
+
+    p{
+        margin-bottom: 2rem;
+    }
+
+    strong, b{
+        margin-top: 2rem;
+        font-size: 2rem;
+        color: $color-primary;
+    }
+
+    blockquote{
+        &:before{
+            content: "";
+            display: block;
+            height: .2rem;
+            width: 8%;
+            background: $color-second;
+            margin-bottom: 1.5rem;
+            margin-top: 5rem;
+        }
+
+        p{
+            @include font($font:$font-title, $size:2.5rem, $line_height:3rem, $color:$color-primary, $font_weight:$regular);
+        }
+    }
+
+    img{
+        width: 40%;
+        height: auto;
+        margin: 1rem 0;
+    }
+
+    ul{
+        margin: 1rem 0;
+        li{
+            position: relative;
+            padding-left: 2rem;
+
+            &:before{
+                content: "\f138";
+                display: inline-block;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                font: normal normal normal 1.4rem/1 FontAwesome;
+                font-size: 1.4rem;
+                text-rendering: auto;
+            }
+        }
+    }
+
+    .wp_gallery{
+        .swiper-wrapper{
+            padding: 2rem 0;
+        }
+        .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 100%;
+
+            @include mq($from: md) {
+                width: 50%;
+            }
+
+            &:not(:last-child):after{
+                @include mq($from: md) {
+                    content: "";
+                    display: block;
+                    height: 60%;
+                    width: .1rem;
+                    background-color: rgba($gray, .3);
+                    position: absolute;
+                    top: 50%;
+                    right: -.1rem;
+                    transform: translateY(-50%);
+                }
+            }
+
+            img{
+                width: auto;
+                max-height: 20rem;
+
+                @include mq($from: md) {
+                    max-height: 10rem;
+                }
+            }
+
+            p{
+                @include font($font:$font, $size:1.5rem, $line_height:1.8rem, $color:$gray, $font_weight:$bold);
+                text-align: center;
+                paddding: 0 1rem;
+            }
+        }
+
+        .swiper-pagination-bullets{
+            bottom: 0;
+
+            .swiper-pagination-bullet-active{
+                background: $color-primary !important;
+            }
+        }
+    }
+}

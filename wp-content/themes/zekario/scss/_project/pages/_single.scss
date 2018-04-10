@@ -1,0 +1,202 @@
+.single{
+    &_relation{
+        @include font($font:$font, $size:1.6rem, $line_height:1.8rem, $color:$gray, $font_weight:$bold);
+        text-transform: uppercase;
+        margin-top: 5rem;
+    }
+
+    &_wrapper{
+        background-color: $background-gray;
+        padding: 4rem 0;
+    }
+
+    &_rating{
+        position: absolute;
+        right: 0;
+
+        @include mq($from: md) {
+            position: static;
+        }
+    }
+
+    &_pin{
+        background-color: $white;
+        border: solid rgba($gray, .3) .1rem;
+        padding: 1.5rem 1.5rem .75rem 1.5rem;
+        position: relative;
+
+        &_image{
+            margin-top: 4rem;
+
+            @include mq($from: sm) {
+                margin-top: 0;
+            }
+
+            img{
+                width: 75%;
+                align-self: center
+            }
+        }
+
+        &_describe{
+            margin-top: 5rem;
+
+            @include mq($from: md) {
+                border-left: .1rem solid rgba($gray, .2);
+            }
+        }
+
+        &_title{
+            @include font($font:$font, $size:1.6rem, $line_height:1.6rem, $color:$gray, $font_weight:$bold);
+            display: block;
+            margin: 3rem 0 1rem 0;
+
+            &--no-mt{
+                margin-top: 0;
+            }
+        }
+
+
+
+        &_tags{
+            li{
+                background-color: $gray-product;
+                display: inline-block;
+                padding: .5rem 1rem;
+                margin-right: .5rem;
+                margin-bottom: .5rem;
+                border-radius: .5rem;
+                @include font($font:$font, $size:1.2rem, $line_height:1.4rem, $color:$white, $font_weight:$regular);
+
+                @include mq($from: lg) {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+
+        &_types{
+            @include mq($from: md) {
+                padding-top: 1rem;
+            }
+
+            li{
+                text-align: center;
+                display: inline-block;
+                padding: 0 1.5rem;
+                border-right: .1rem solid rgba($gray, .3);
+                @include font($font:$font, $size:1.2rem, $line_height:1.4rem, $color:$gray-product, $font_weight:$regular);
+
+                &:first-child{
+                    padding-left: 0;
+                }
+
+                div{
+                    width: 4rem;
+                    height: 4rem;
+                    background-size: 120% 120%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+            }
+        }
+
+        &_category{
+            width: 5rem;
+            position: absolute;
+            top: -1.5rem;
+            right: 0;
+
+            @include mq($from: md) {
+                top: 0;
+                width: 6rem;
+            }
+
+            @include mq($from: lg) {
+                width: 6rem;
+            }
+
+            li{
+                width: 100%;
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                border-left: solid rgba($gray, .3) .1rem;
+                border-top: solid rgba($gray, .3) .1rem;
+                border-bottom: solid rgba($gray, .3) .1rem;
+                background-size: 80% 80%;
+                background-repeat: no-repeat;
+                background-position: center;
+
+                &:first-child{
+                    border-top: 0;
+                }
+
+                &:last-child{
+                    border-top: 0;
+                }
+
+                &:after{
+                    content: "";
+                    display: block;
+                    padding-bottom: 100%;
+                }
+            }
+        }
+
+        &_grade{
+            position: absolute;
+            right: 6rem;
+            top: 1.5rem;
+
+            li{
+                display: inline-block;
+                padding: 0 .8rem;
+
+                &:not(:last-child){
+                    border-right: .1rem solid rgba($gray, .2);
+                }
+            }
+        }
+
+        &_table{
+            width: 100%;
+            margin-top: 3rem;
+            margin-bottom: 0;
+
+            @include mq($from: md) {
+                display: table;
+            }
+
+            tbody{
+                tr:first-child{
+                    background: #949598 !important;
+
+                    td{
+                        @include font($font:$font, $size:1.5rem, $line_height:2rem, $color:$white, $font_weight:$bold);
+                    }
+                }
+
+                tr{
+                    &:nth-child(odd) {
+                        background: #dcddde;
+                    }
+
+                    &:nth-child(even) {
+                        background: #ececec;
+                    }
+                }
+
+                td{
+                    @include font($font:$font, $size:1.5rem, $line_height:2rem, $color:$gray, $font_weight:$regular);
+                }
+            }
+
+            td{
+                border: .1rem solid $white;
+                padding: 2rem 1.5rem;
+                text-align: center;
+            }
+        }
+    }
+
+}

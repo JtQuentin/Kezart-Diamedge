@@ -1,0 +1,10 @@
+.page-simple{
+    padding: 6rem 0;
+
+    h1{
+        @include font($font:$font, $size:6rem, $line_height:null, $color:$color-primary, $font_weight:$bold);
+        margin-bottom: 4rem;
+        display: inline-block;
+        letter-spacing: .2rem;
+    }
+}

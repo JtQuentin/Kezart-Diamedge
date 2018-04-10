@@ -1,0 +1,60 @@
+.gform_wrapper .top_label .gfield_label,
+.gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
+    display: none;
+}
+.gform_title    {display: none}
+
+.gform_wrapper input[type=text],
+.gform_wrapper textarea, .gform_wrapper select {
+    background: #eee;
+    border: none;
+    border-radius: 0;
+    color: #999 !important;
+    padding: 15px !important;
+}
+.gform_wrapper .gform_footer input.button {
+    float: right;
+    background: transparent;
+    border: 2px solid #19528e;
+    font-size: 22px;
+    color: #19528e;
+    padding: 12px 23px;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+.gform_wrapper .gform_footer input.button:hover {
+    background: rgba(0, 0, 0, 0.05);
+    border: 2px solid transparent;
+}
+
+
+.gform_wrapper ul.gfield_checkbox li input[type=checkbox], .gform_wrapper ul.gfield_radio li input[type=radio] {
+    visibility: hidden;
+    margin: 0;
+    width: 0!important;
+}
+.gform_wrapper input[type=checkbox] + label, .gform_wrapper input[type=radio] + label { font-size: 16px; }
+input[type=checkbox] + label:hover, input[type=radio] + label:hover { cursor: pointer; }
+input[type=checkbox] + label:before, input[type=radio] + label:before {
+    font: normal normal normal 14px/1 FontAwesome;
+    position: relative;
+    margin-right: 0.5em;
+}
+
+.gform_wrapper ul.gfield_checkbox li, .gform_wrapper ul.gfield_radio li {
+    color: #9c9c9c;
+    display: inline;
+}
+
+
+input[type=checkbox] + label:before { content: "\f1db"; }
+input[type=checkbox] + label:hover:before { content: "\f058"; filter: alpha(opacity=20); opacity: 0.2; }
+input[type=checkbox]:checked + label:before { content: "\f058"; }
+input[type=checkbox]:checked + label:hover:before { filter: alpha(opacity=100); opacity: 1; }
+
+.gform_wrapper form li, .gform_wrapper li {
+    padding-left: 0;
+}
+
+#choice_1_11_1 {display : none }

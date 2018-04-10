@@ -1,0 +1,28 @@
+/* # Import config */
+@import '_config/config';
+
+/* # Import bookstores */
+@import '_config/sass-mq/_mq.scss';
+
+/* # Import utilities */
+@import '_config/functions';
+@import '_config/mixins';
+
+/* # Import fonts */
+@import '_project/fonts/fonts';
+
+/* # Import base */
+@import '_project/base/*';
+
+/* # Imports des utilitaires (préfixés)
+Il est possible de sortir de cette encapsulation avec `@at-root{}`.
+*/
+
+/* # Import Layouts */
+@import '_project/layout/**';
+
+/* # Imports components */
+@import '_project/components/*';
+
+/* # Import page's layouts */
+@import '_project/pages/*';

@@ -1,0 +1,19 @@
+.breadcrumbs{
+  @include font($font:$font, $size:1.4rem, $line_height:2rem, $color:$white, $font_weight:$bold);
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  display: inline-block;
+
+  .current{
+    font-size: 2.6rem;
+    position: relative;
+
+    a:focus{
+      color: inherit;
+    }
+
+    a:hover{
+      color: $white !important;
+    }
+  }
+}

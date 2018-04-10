@@ -1,0 +1,200 @@
+.filterExpanded{
+    background: linear-gradient(to bottom, rgba(4,62,123,1) 0%,rgba(4,62,123,1) 100%);
+
+    &_wrapper{
+        padding: 2rem;
+
+        & > li:last-child{
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: solid .1rem rgba($white, .3);
+        }
+    }
+
+    &_title{
+        @include font($font:$font, $size:1.4rem, $line_height:1.4rem, $color:$white, $font_weight:$bold);
+        text-transform: uppercase;
+    }
+}
+
+.filter{
+    margin-top: -5.5rem;
+
+    &_sticky{
+        padding-top: 5.5rem;
+        background-color: $background-gray;
+    }
+
+    &_seeAll{
+        display: inline-block;
+    }
+
+    &_wrapper{
+        position: relative;
+        display: flex;
+        width: 80%;
+
+        @include mq($from: md) {
+            width: 95%;
+        }
+    }
+
+    &_group{
+        margin-bottom: 2rem;
+        margin: auto;
+        overflow-x: hidden;
+        width: 100%;
+
+        &_state{
+            border-radius: 50%;
+            width: 1.2rem;
+            height: 1.2rem;
+            text-align: center;
+            border: solid .1rem $gray;
+            background: $white;
+            display: flex;
+            margin-left: .4rem;
+            position: relative;
+            overflow: hidden;
+            transform-origin: center center;
+            transition: all .5s;
+
+            &--hover{
+                content: '';
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: .6rem;
+                height: .6rem;
+                background: $black;
+                border-radius: 50%;
+                opacity: 0;
+                transform-origin: center center;
+                transform: translate(-50%, -50%) scale(0);
+                transition: transform .5s, opacity .2s;
+            }
+
+            svg.undo{
+                width: .7rem !important;
+                height: auto;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -200%);
+                transition: .5s all ease-out;
+            }
+        }
+
+        &_button{
+            @include font($font:$font, $size:1.3rem, $line_height:1.4rem, $color:$gray, $font_weight:$semi-bold);
+            background-color: $white;
+            display: flex;
+            position: relative;
+            align-items: center;
+            padding: .8rem 1.2rem;
+            margin-right: 1rem;
+            border-radius: .5rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            border: none;
+            transition: .5s all;
+
+            &:not(.filter_group_button--isChecked):hover{
+                .filter_group_state--hover{
+                    opacity: 1;
+                    transform: translate(-50%, -50%) scale(1);
+                }
+            }
+
+            svg{
+                width: 2.5rem;
+                height: auto;
+                position: absolute;
+                left: .8rem;
+            }
+
+            &--isChecked{
+                background-color: $black;
+                color: $white;
+
+                svg{
+                    path{
+                        fill: $white;
+                        stroke: $white;
+                    }
+                }
+
+                .filter_group_state{
+                    border: solid .1rem $white;
+
+                    svg.undo{
+                        transform: translate(-50%, -50%);
+                        path{
+                            fill: $black;
+                            stroke: $black;
+                        }
+                    }
+                }
+            }
+
+            &--all{
+                background-color: $black;
+                color: $white;
+            }
+        }
+
+        //Slider
+        .swiper-slide{
+            width: auto;
+        }
+
+        .swiper-button-prev--machine,
+        .swiper-button-next--machine,
+        .swiper-button-prev--application,
+        .swiper-button-next--application{
+            cursor: pointer;
+            text-align: center;
+            line-height: 4rem;
+            position: absolute;
+            width: 4rem;
+            height: 4rem;
+            top: 50%;
+            color: $white;
+            font-size: 2rem;
+            background: none;
+            margin-top: 0;
+            transform: translateY(-50%);
+
+            &.swiper-button-disabled{
+                display: none;
+            }
+        }
+
+        .swiper-button-prev--machine,
+        .swiper-button-prev--application{
+            left: -1rem;
+        }
+
+        .swiper-button-next--machine,
+        .swiper-button-next--application{
+            right: -1rem;
+        }
+    }
+}
+
+.filter_carrousel--machine{
+    .filter_group_button{
+        padding: 1.5rem;
+
+        span{
+            margin-left: 2.3rem;
+            border-left: .1rem solid rgba($gray, .2);
+            padding-left: 1rem;
+        }
+    }
+}
+
+.filter_all--machine{
+    padding: 1.5rem;
+}

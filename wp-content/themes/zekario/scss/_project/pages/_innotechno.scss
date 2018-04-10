@@ -1,0 +1,79 @@
+ .diagonal,
+.images {
+    height: 400px;
+    overflow: hidden
+}
+
+.images {
+    background: #fff;
+    margin-bottom: 2rem
+}
+
+.left {
+    margin-left: -50%
+}
+
+.right {
+    margin-right: -50%
+}
+
+.diagonal {
+    transform: skewx(-25deg)
+}
+
+.diagonal:nth-child(1) {
+    background: red
+}
+
+.diagonal:nth-child(2) {
+    background: #00f
+}
+
+.diagonal .skew {
+    transform: skewx(25deg);
+    height: 100%;
+    width: 100%
+}
+
+.diagonal:hover {
+    opacity: .9
+}
+
+.background {
+    background-size: cover;
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%
+}
+
+.left .background {
+    background-image: url(http://www.francetourisme.fr/media/Visite_tour_eiffel/visite_tour_eiffel_2.jpg)
+}
+
+.right .background {
+    background-image: url(https://www.parisinfo.com/var/otcp/sites/images/media/1.-photos/02.-sites-culturels-630-x-405/tour-eiffel-trocadero-630x405-c-thinkstock/37221-1-fre-FR/Tour-Eiffel-Trocadero-630x405-C-Thinkstock.jpg)
+}
+
+.left .skew {
+    margin-left: 25%
+}
+
+@media screen and (max-width:767px) {
+    .left .skew {
+        margin-left: -20%;
+        width: 160%
+    }
+}
+
+.right .skew {
+    margin-left: -25% 
+}
+
+@media screen and (max-width:767px) {
+    .right .skew {
+        margin-left: -80%;
+        width: 160%
+    }
+}
+ 

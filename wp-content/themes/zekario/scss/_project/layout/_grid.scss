@@ -1,0 +1,5 @@
+.row > [class^="col-"],
+.row > [class^=" col-"] {
+    padding-right: .75rem;
+    padding-left: .75rem;
+}

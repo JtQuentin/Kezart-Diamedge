@@ -1,0 +1,569 @@
+{
+    "key": "group_5703cdde9ea8a",
+    "title": "Contenu",
+    "fields": [
+        {
+            "key": "field_57ee287dc2b6f",
+            "label": "Contenus",
+            "name": "contenus",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "hide-title",
+                "id": ""
+            },
+            "button_label": "Ajouter un contenu",
+            "min": "",
+            "max": "",
+            "layouts": [
+                {
+                    "key": "57ee2ec3ce0ed",
+                    "name": "col_12",
+                    "label": "Colonne : 1\/1",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_57ee2ec3ce0ee",
+                            "label": "Contenu",
+                            "name": "col_12",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "default_value": "",
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_588a3291d6af0",
+                            "label": "Option",
+                            "name": "option",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_588a227b5c3d6"
+                            ],
+                            "prefix_label": 0,
+                            "prefix_name": 0,
+                            "display": "seamless",
+                            "layout": "block"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "580b82930b32a",
+                    "name": "col_6",
+                    "label": "2 Colonnes : 1\/2 + 1\/2",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_580b82930b32b",
+                            "label": "Contenu gauche",
+                            "name": "col_6_left",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "default_value": "",
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_580b82d50b32f",
+                            "label": "Contenu droite",
+                            "name": "col_6_right",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "default_value": "",
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_580b82930b32c",
+                            "label": "Option responsive",
+                            "name": "reponsive",
+                            "type": "checkbox",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "20",
+                                "class": "force-title",
+                                "id": ""
+                            },
+                            "layout": "horizontal",
+                            "choices": {
+                                "Mobile": "Mobile",
+                                "Tablette": "Tablette"
+                            },
+                            "default_value": [],
+                            "allow_custom": 0,
+                            "save_custom": 0,
+                            "toggle": 1,
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_57ee2ec3ce0f1",
+                            "label": "Sur Mobile",
+                            "name": "col",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_580b82930b32c",
+                                        "operator": "==",
+                                        "value": "Mobile"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "40",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "vertical",
+                            "choices": {
+                                "col-12": "1 Colonne",
+                                "col-6": "2 Colonne"
+                            },
+                            "default_value": "",
+                            "other_choice": 1,
+                            "save_other_choice": 1,
+                            "allow_null": 0,
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_580b7f8e810c9",
+                            "label": "Sur Tablette",
+                            "name": "col-sm",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_580b82930b32c",
+                                        "operator": "==",
+                                        "value": "Tablette"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "40",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "vertical",
+                            "choices": {
+                                "col-sm-12": "1 Colonne",
+                                "col-sm-6": "2 Colonne"
+                            },
+                            "default_value": "",
+                            "other_choice": 1,
+                            "save_other_choice": 1,
+                            "allow_null": 0,
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_588a34ea4b1b0",
+                            "label": "Sidebar",
+                            "name": "sidebar-option",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_588a227b5c3d6"
+                            ],
+                            "prefix_label": 0,
+                            "prefix_name": 0,
+                            "display": "seamless",
+                            "layout": "block"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "588a1f5f88e7d",
+                    "name": "col_6_13",
+                    "label": "2 Colonnes : 1\/3 + 2\/3",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_588a1f5f88e7e",
+                            "label": "Contenu gauche",
+                            "name": "col_6_left",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "default_value": "",
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_588a1f5f88e7f",
+                            "label": "Contenu droite",
+                            "name": "col_6_right",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "default_value": "",
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_588a1f5f88e80",
+                            "label": "Option responsive",
+                            "name": "reponsive",
+                            "type": "checkbox",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "20",
+                                "class": "force-title",
+                                "id": ""
+                            },
+                            "layout": "vertical",
+                            "choices": {
+                                "Mobile": "Mobile",
+                                "Tablette": "Tablette"
+                            },
+                            "default_value": [],
+                            "allow_custom": 0,
+                            "save_custom": 0,
+                            "toggle": 1,
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_588a1f5f88e81",
+                            "label": "Sur Mobile",
+                            "name": "col",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_588a1f5f88e80",
+                                        "operator": "==",
+                                        "value": "Mobile"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "40",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "vertical",
+                            "choices": {
+                                "col-12": "1 Colonne",
+                                "col-6": "2 Colonne"
+                            },
+                            "default_value": "",
+                            "other_choice": 1,
+                            "save_other_choice": 1,
+                            "allow_null": 0,
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_588a1f5f88e82",
+                            "label": "Sur Tablette",
+                            "name": "col-sm",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_588a1f5f88e80",
+                                        "operator": "==",
+                                        "value": "Tablette"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "40",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "",
+                            "choices": {
+                                "col-sm-12": "1 Colonne",
+                                "col-sm-6": "2 Colonne"
+                            },
+                            "default_value": "",
+                            "other_choice": 1,
+                            "save_other_choice": 1,
+                            "allow_null": 0,
+                            "return_format": ""
+                        },
+                        {
+                            "key": "field_588a35044b1b2",
+                            "label": "Option",
+                            "name": "option",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_588a227b5c3d6"
+                            ],
+                            "prefix_label": 0,
+                            "prefix_name": 0,
+                            "display": "seamless",
+                            "layout": "block"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "588a1fca88e83",
+                    "name": "col_6_23",
+                    "label": "2 Colonnes : 2\/3 + 1\/3",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_588a1fca88e84",
+                            "label": "Contenu gauche",
+                            "name": "col_6_left",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "default_value": "",
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_588a1fca88e85",
+                            "label": "Contenu droite",
+                            "name": "col_6_right",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "default_value": "",
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_588a1fca88e86",
+                            "label": "Option responsive",
+                            "name": "reponsive",
+                            "type": "checkbox",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "20",
+                                "class": "force-title",
+                                "id": ""
+                            },
+                            "layout": "horizontal",
+                            "choices": {
+                                "Mobile": "Mobile",
+                                "Tablette": "Tablette"
+                            },
+                            "default_value": [],
+                            "allow_custom": 0,
+                            "save_custom": 0,
+                            "toggle": 1,
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_588a1fca88e87",
+                            "label": "Sur Mobile",
+                            "name": "col",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_588a1fca88e86",
+                                        "operator": "==",
+                                        "value": "Mobile"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "40",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "vertical",
+                            "choices": {
+                                "col-12": "1 Colonne",
+                                "col-6": "2 Colonne"
+                            },
+                            "default_value": "",
+                            "other_choice": 1,
+                            "save_other_choice": 1,
+                            "allow_null": 0,
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_588a1fca88e88",
+                            "label": "Sur Tablette",
+                            "name": "col-sm",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_588a1fca88e86",
+                                        "operator": "==",
+                                        "value": "Tablette"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "40",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "vertical",
+                            "choices": {
+                                "col-sm-12": "1 Colonne",
+                                "col-sm-6": "2 Colonne"
+                            },
+                            "default_value": "",
+                            "other_choice": 1,
+                            "save_other_choice": 1,
+                            "allow_null": 0,
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_588a34fd4b1b1",
+                            "label": "Option",
+                            "name": "option",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_588a227b5c3d6"
+                            ],
+                            "prefix_label": 0,
+                            "prefix_name": 0,
+                            "display": "seamless",
+                            "layout": "block"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "!=",
+                "value": "4"
+            },
+            {
+                "param": "page",
+                "operator": "!=",
+                "value": "6"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1491124131
+}

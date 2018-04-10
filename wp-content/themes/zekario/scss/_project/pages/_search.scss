@@ -1,0 +1,19 @@
+.search{
+    &_no-found{
+        @include font($font:$font, $size:3rem, $line_height:3.5rem, $color:$gray, $font_weight:$bold);
+        display: block;
+        width: 100%;
+
+        &:before{
+            content: "\f00d";
+            display: block;
+            @include font($font:FontAwesome, $size:5rem, $line_height:9rem, $color:$color-primary, $font_weight:$bold);
+            text-align: center;
+            width: 10rem;
+            height: 10rem;
+            border: solid .5rem $color-primary;
+            border-radius: 50%;
+            margin: 3rem auto;
+        }
+    }
+}

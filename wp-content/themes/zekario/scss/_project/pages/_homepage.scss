@@ -1,0 +1,102 @@
+.home{
+    &_slider{
+        margin-bottom: 2rem;
+        position: relative;
+        overflow: hidden;
+
+        @include mq($from: sm) {
+            overflow-x: hidden;
+            margin-bottom: 0;
+        }
+
+        &_item{
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 3rem 0;
+            min-height: 40vh;
+            background-color: $gray;
+            background-blend-mode: overlay;
+
+            @include mq($from: sm) {
+                padding: 0;
+                min-height: 50vh;
+            }
+        }
+
+        &_baseline{
+
+            @include mq($from: sm) {
+                margin-top: 5vh;
+                margin-left: 10%;
+            }
+
+            @include mq($from: md) {
+                margin-top: 5vh;
+                margin-left: 10%;
+                margin-right: 5%;
+            }
+
+            @include mq($from: lg) {
+                margin-top: 5vh;
+                margin-left: 15%;
+                margin-right: 5%;
+            }
+
+            h3{
+                @include font($font:$font, $size:2.5rem, $line_height:2.5rem, $color:$white, $font_weight:$bold);
+                margin-bottom: 1rem;
+                text-shadow: 0 0 5rem #000;
+
+                @include mq($from: sm) {
+                    @include font($font:$font, $size:2.8rem, $line_height:3.2rem, $color:$white, $font_weight:$bold);
+                }
+
+                @include mq($from: md) {
+                    @include font($font:$font, $size:3rem, $line_height:3.5rem, $color:$white, $font_weight:$bold);
+                }
+
+                @include mq($from: lg) {
+                    @include font($font:$font, $size:3.5rem, $line_height:4.5rem, $color:$white, $font_weight:$bold);
+                }
+            }
+
+            span{
+                @include font($font:$font, $size:1.5rem, $line_height:2rem, $color:$white, $font_weight:$regular);
+                display: block;
+
+                @include mq($from: md) {
+                    @include font($font:$font, $size:1.8rem, $line_height:2.5rem, $color:$white, $font_weight:$regular);
+                }
+            }
+        }
+
+
+        .swiper-button-prev,
+        .swiper-button-next{
+            display: none;
+
+            @include mq($from: md) {
+                color: $white;
+                font-size: 2rem;
+                width: 4.5rem;
+                height: 4.55rem;
+                background: none;
+                background-color: rgba(0,0,0, .4);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 0;
+                transform: translateY(-50%);
+            }
+        }
+
+        .swiper-button-prev{
+            left: 2vw;
+        }
+
+        .swiper-button-next{
+            right: 2vw;
+        }
+    }
+}

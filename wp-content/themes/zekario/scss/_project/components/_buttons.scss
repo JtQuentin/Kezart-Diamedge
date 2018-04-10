@@ -1,0 +1,47 @@
+a.btn,
+a[class$="btn-"]{
+    color: $white;
+    font-family: $font-title;
+    font-weight: $bold;
+    text-transform: uppercase;
+    background-image: linear-gradient($color-primary,$color-second);
+    font-size: 1.5rem;
+    padding: 1rem 1rem;
+    margin-top: 3rem;
+    letter-spacing: .1rem;
+    display: inline-block;
+    z-index: 100;
+    position: relative;
+    border: none;
+    border-radius: 0;
+    transition: 1s background-image ease-in;
+
+    &:before{
+        content: '';
+        background-image: linear-gradient($black,$black);
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        z-index: -100;
+        transition: opacity 1s ease-in-out;
+    }
+
+    &:hover{
+        &:before {
+            opacity: 1;
+        }
+    }
+
+    @include mq($from: md) {
+        font-size: 1.8rem;
+        padding: 1rem 1.5rem;
+    }
+
+    i{
+        padding-left: .5rem;
+    }
+}

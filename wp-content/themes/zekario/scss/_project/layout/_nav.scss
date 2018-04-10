@@ -1,0 +1,257 @@
+.navbar{
+    padding: 1rem 0;
+
+    &_brand{
+        &-big{
+            width: 15rem;
+
+            @include mq($from: sm){
+                width: 29.5rem;
+            }
+        }
+
+        &-small{
+            width: 20rem;
+        }
+    }
+
+    &-collapse{
+        justify-content: flex-end;
+    }
+
+    &-toggler{
+        top: 1.8rem;
+        border: none;
+
+        &-icon{
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+    }
+
+    &-nav{
+        position: relative;
+
+        > li{
+            padding-bottom: 2rem;
+            cursor: pointer;
+
+            @include mq($from: lg){
+                position: static;
+                padding: 1rem 1.5rem 1rem 1.5rem;
+            }
+
+            &:first-child{
+                padding-top: 2rem;
+
+                @include mq($from: lg){
+                    padding-top: 0;
+                }
+            }
+
+            &:not(:last-child){
+                @include mq($from: lg){
+                    padding: 1rem 1.5rem;
+                }
+            }
+
+            //Current Menu
+            &.current-menu-item.active{
+                > a{
+                    color: $color-primary !important;
+                    position: relative;
+                }
+            }
+
+            &.show{
+                @include mq($from: lg){
+                    background-color: $color-primary;
+                }
+
+                > a{
+                    @include mq($from: lg) {
+                        color: $white !important;
+                    }
+                }
+            }
+        }
+
+        a{
+            @include font($font:$font-title, $size:1.8rem, $line_height:2rem, $color:$gray, $font_weight:$bold);
+            text-transform: uppercase;
+            padding: 0 !important;
+        }
+
+        .dropdown-menu{
+            padding: 0;
+            background: none;
+
+            li{
+                padding: 1rem 1.5rem;
+                @include mq($from: lg){
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+.depth_0{
+    border:none;
+    width: 100%;
+
+    @include mq($from: lg){
+        position: absolute;
+        top: 3.9rem;
+        background: $dropdown-menu !important;
+    }
+
+    > li{
+        display: block;
+        border:none;
+        border-radius: 0;
+        //padding: 3rem 1.5rem 1rem 1.5rem;
+        font-size: 3rem;
+        color: $gray;
+        border-bottom: .1rem solid rgba($gray, .3);
+
+        @include mq($from: lg){
+            border-bottom: none;
+            padding: 0 1.5rem;
+            position: relative;
+            flex: 1;
+        }
+
+        &:first-child{
+            padding-top: 2rem;
+            border-top: none;
+
+            @include mq($from: lg){
+                padding: 0;
+                margin-top: 0;
+                border-top: none;
+            }
+        }
+
+        &:not(:last-child){
+            @include mq($from: lg){
+                border-right: .1rem solid rgba($gray, .1);
+            }
+
+            > a:before{
+                @include mq($from: lg){
+                    content: "" !important;
+                    display: block !important;
+                    width: .1rem;
+                    height: 100%;
+                    background-color: $color-primary;
+                    position: absolute;
+                    top: 0;
+                    right: -.1rem;
+                    z-index: 2;
+                }
+            }
+        }
+
+        > a{
+            position: relative;
+
+            &:hover{
+                background-color: transparent;
+
+                @include mq($from: lg){
+                    background-color: $color-primary;
+                }
+            }
+
+            @include mq($from: lg){
+                color:$white !important;
+                padding: 1rem !important;
+                background-color: $color-primary;
+            }
+        }
+
+        &.current_page_item,
+        &.current-menu-ancestor{
+            > a{
+                color: $gray;
+                position: relative;
+
+                @include mq($from: lg){
+                    color: $white;
+                }
+
+                &:before{
+                    content: '';
+                    display: none;
+                }
+            }
+        }
+
+        a{
+            @include font($font:$font, $size:1.6rem, $line_height:2rem, $color:null, $font_weight:$bold);
+            cursor: auto;
+        }
+    }
+}
+
+.depth_1{
+    position: static;
+    display: block;
+    border:none;
+    width: 100%;
+    border-radius: 0;
+
+    > li{
+        border:none;
+        display: block;
+        width: 100%;
+        transition: all 0.5s;
+
+        &:not(.active):hover{
+            background-color: rgba($gray, .1);
+        }
+
+        a{
+            @include font($font:$font, $size:1.5rem, $line_height:2rem, $color:$gray, $font_weight:$semi-bold);
+            cursor: pointer;
+            text-transform: none;
+            padding: .8rem .8rem .8rem 1.5rem !important;
+            margin-left: 1rem;
+            position: relative;
+            background-color: transparent;
+
+            &:hover{
+                background-color: transparent;
+            }
+
+            &:before{
+                content: "\f105";
+                @include font($font:FontAwesome, $size:1.2rem, $line_height:null, $color:$color-second, $font_weight:$semi-bold);
+                display: inline-block;
+                position: absolute;
+                top: 55%;
+                left: .3rem;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    .current-menu-item.active{
+        a{
+            color: $color-primary;
+        }
+    }
+}
+
+
+.show > .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+
+    @include mq($from: lg){
+        flex-direction: row;
+    }
+}
+
+

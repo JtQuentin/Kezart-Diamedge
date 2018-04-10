@@ -1,0 +1,99 @@
+.searchbar--headband{
+  #searchform{
+    label{
+      position: relative;
+      margin: 0;
+      width: 90%;
+
+      @include mq($from: md) {
+        width: 60%;
+      }
+    }
+
+    input{
+      height: 4.3rem;
+      width: 100%;
+      border: none;
+      padding: 0 1rem;
+      @include font($font:$font, $size:1.6rem, $line_height:1.6rem, $color:$gray, $font_weight:$regular);
+      font-style: italic;
+    }
+
+    a{
+      border: none;
+      border-left: .1rem solid rgba($gray, .3);
+      color: $gray;
+      padding: 0 1rem;
+      background: none;
+      position: absolute;
+      font-size: 1.8rem;
+      right: 0;
+      top: 50%;
+      transform: translateY(-54%);
+    }
+  }
+}
+
+.searchbar--toolbar{
+  &--active{
+    div#searchform{
+      opacity: 1;
+
+      label{
+        width: 40%;
+      }
+
+      a{
+        border-left: .1rem solid rgba($white, .3);
+        right: 0;
+      }
+    }
+  }
+
+  #searchform{
+    opacity: 0;
+    transition: opacity 1s;
+
+    label{
+      position: relative;
+      margin: 0;
+      width: 1.5rem;
+      transition: 1s all;
+    }
+
+    input{
+      width: 100%;
+      border: none;
+      padding: 0 4.2rem 0 1rem;
+      @include font($font:$font, $size:1.6rem, $line_height:1.6rem, $color:$white, $font_weight:$regular);
+      font-style: italic;
+      background: none;
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: $white;
+      }
+      &::-moz-placeholder { /* Firefox 19+ */
+        color: $white;
+      }
+      &:-ms-input-placeholder { /* IE 10+ */
+        color: $white;
+      }
+      &:-moz-placeholder { /* Firefox 18- */
+        color: $white;
+      }
+    }
+
+    a{
+      border: none;
+      border-left: .1rem solid rgba($gray, .0);
+      color: $white;
+      padding: 0 1rem;
+      background: none;
+      position: absolute;
+      font-size: 1.8rem;
+      right: 0;
+      top: 50%;
+      transform: translateY(-54%);
+      transition: 1s all;
+    }
+  }
+}
